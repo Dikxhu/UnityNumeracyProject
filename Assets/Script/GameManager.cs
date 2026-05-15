@@ -24,12 +24,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI answerText;
 
-    // LETTER BUTTONS
-    public GameObject buttonA;
-    public GameObject buttonP1;
-    public GameObject buttonP2;
-    public GameObject buttonL;
-    public GameObject buttonE;
+    // LETTER BUTTON GROUP
+    public GameObject letterButtons;
 
     public GameObject submitButton;
 
@@ -63,11 +59,7 @@ public class GameManager : MonoBehaviour
         answerText.gameObject.SetActive(false);
 
         // HIDE LETTER BUTTONS
-        buttonA.SetActive(false);
-        buttonP1.SetActive(false);
-        buttonP2.SetActive(false);
-        buttonL.SetActive(false);
-        buttonE.SetActive(false);
+        letterButtons.SetActive(false);
 
         submitButton.SetActive(false);
 
@@ -162,11 +154,7 @@ public class GameManager : MonoBehaviour
         answerText.gameObject.SetActive(true);
 
         // SHOW LETTER BUTTONS
-        buttonA.SetActive(true);
-        buttonP1.SetActive(true);
-        buttonP2.SetActive(true);
-        buttonL.SetActive(true);
-        buttonE.SetActive(true);
+        letterButtons.SetActive(true);
 
         submitButton.SetActive(true);
 
@@ -239,11 +227,7 @@ public class GameManager : MonoBehaviour
 
             answerText.gameObject.SetActive(false);
 
-            buttonA.SetActive(false);
-            buttonP1.SetActive(false);
-            buttonP2.SetActive(false);
-            buttonL.SetActive(false);
-            buttonE.SetActive(false);
+            letterButtons.SetActive(false);
 
             submitButton.SetActive(false);
 
