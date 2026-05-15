@@ -2,18 +2,15 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    // This function runs when you click the apple with your mouse
-    void OnMouseDown()
-    {
-        // 1. Tell the AppleManager to add 1 to the score
-        AppleManager manager = FindObjectOfType<AppleManager>();
-        
-        if (manager != null)
-        {
-            manager.AddApple();
-        }
+    public GameManager gameManager;
 
-        // 2. Destroy the apple so it disappears from the park
-        Destroy(gameObject);
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            gameManager.CollectApple();
+
+            Destroy(gameObject);
+        }
     }
 }
